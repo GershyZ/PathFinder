@@ -1,4 +1,4 @@
-﻿using PathFinder.Pages;
+﻿using PathFinder.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,13 +6,13 @@ using Xamarin.Forms;
 
 namespace CompetenceActivities
 {
-    public class CornellNoteTaking : ChallengeFormPage
+    public class CornellNoteTaking : ChallengeModel
     {
-        public CornellNoteTaking() {
+        public CornellNoteTaking(string title): base(title) {
             
         }
 
-        public StackLayout getStructure()
+        public override View GetStructure(string lbl)
         {
 
             var structure = new StackLayout
@@ -22,6 +22,6 @@ namespace CompetenceActivities
             };
 
             return structure;
-        }
+        }                
     }
 }

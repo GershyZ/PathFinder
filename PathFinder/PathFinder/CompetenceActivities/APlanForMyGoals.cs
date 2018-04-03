@@ -1,4 +1,4 @@
-﻿using PathFinder.Pages;
+﻿using PathFinder.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,21 +6,23 @@ using Xamarin.Forms;
 
 namespace CompetenceActivities
 {
-    public class APlanForMyGoals : ChallengeFormPage
+    public class APlanForMyGoals : ChallengeModel
     {
-        
-        public APlanForMyGoals()
+
+        public APlanForMyGoals(string title) : base(title)
         {
-            _addSection("Work Habits");
-            _addSection("Academic");
-            _addSection("Personal");
-            _addSection("Behavior");
-            _addSection("Attendance");  
+            ChallengeContent = new List<string> {
+            "Work Habits",
+            "Academic",
+            "Personal",
+            "Behavior",
+            "Attendance"
+        };
         }
 
-        private void _addSection(string lbl)
+        public override View GetStructure(string lbl)
         {
-            var section = new StackLayout
+            return new StackLayout
             {
                 Orientation = StackOrientation.Vertical,
                 Children =
@@ -32,8 +34,6 @@ namespace CompetenceActivities
                 },
                 Margin = 15
             };
-            AddChallengeContent(section);
-            
         }
     }
 }

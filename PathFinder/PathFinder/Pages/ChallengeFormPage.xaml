@@ -4,7 +4,9 @@
              x:Class="PathFinder.Pages.ChallengeFormPage">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout x:Name="sl_challenge_content"/>
+            <StackLayout x:Name="sl_content">   
+
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using PathFinder.Models;
 using PathFinder.Views;
 
@@ -17,7 +12,7 @@ namespace PathFinder.Pages
             Content = new StackLayout            {
                 Children = {
                     new CustomWebView {
-                        Uri = Route.ROUTEPDF,
+                        Uri = resource.Uri,
                         HorizontalOptions = LayoutOptions.FillAndExpand,
                         VerticalOptions = LayoutOptions.FillAndExpand
                     }

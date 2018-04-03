@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PathFinder.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
@@ -9,18 +10,33 @@ namespace PathFinder.ViewModels
 {
     public class ChallengeFormVM : INotifyPropertyChanged
     {
-        public List<View> ChallengeContent { get; }
+        private ChallengeModel challenge;
+        public List<View> ContentViews { get
+            {
+                List < View >content = new List<View>();
+                foreach (string lbl in challenge.ChallengeContent)
+                {
+                    content.Add(challenge.GetStructure(lbl));
+                }
+                return content;
+            }
+        }
         
-        public ChallengeFormVM()
+        public ChallengeFormVM(ChallengeModel c)
         {
-            ChallengeContent = new List<View>();
+            challenge = c;
         }
 
+        public bool Completed
+        {
+            get { return challenge.Completed; }
+            set { challenge.Completed = value; }                    
+        }
         event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged
         {
             add
             {
-                throw new NotImplementedException();
+               // throw new NotImplementedException();
             }
 
             remove

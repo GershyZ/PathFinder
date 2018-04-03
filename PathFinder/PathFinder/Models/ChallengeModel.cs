@@ -1,26 +1,22 @@
 ﻿using PathFinder.Pages;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
+using Xamarin.Forms;
 namespace PathFinder.Models
 {
-    public class ChallengeModel : LevelContentModel
-    {
-        ChallengeFormPage _form;
+    public abstract class ChallengeModel : LevelContentModel
+    {        
+        public List<string> ChallengeContent;
         public ChallengeModel(string title) : base(title)
         {
-            _form = new ChallengeFormPage();
+            ChallengeContent = new List<string>();
         }
-        public ChallengeModel(string title, ChallengeFormPage cfp) : base(title)
-        {
-            _form = cfp;
-            _form.SetParent(this);
-        }
+
+        public abstract View GetStructure(string lbl);
 
         public override void onTap()
         {
-            Route.showLevelContent(_form);
+            Route.showLevelContent(new ChallengeFormPage(this));
         }
     }
 }

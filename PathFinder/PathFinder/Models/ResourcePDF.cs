@@ -12,7 +12,10 @@ namespace PathFinder.Models
         public ResourcePDF(string name, int page): base(name) {
             numpage = page;
         }
-
+        public string Uri
+        {
+            get { return string.Format("{0}.{1}.pdf", Route.PDFNAME, numpage); }
+        }
         public override void onTap()
         {
             Route.showLevelContent(new CustomContentPage(this));

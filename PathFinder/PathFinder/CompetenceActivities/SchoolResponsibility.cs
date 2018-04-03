@@ -1,4 +1,4 @@
-﻿using PathFinder.Pages;
+﻿using PathFinder.Models;
 
 using System;
 using System.Collections.Generic;
@@ -8,31 +8,33 @@ using Xamarin.Forms;
 
 namespace CompetenceActivities
 {
-    public class SchoolResponsibility : ChallengeFormPage
+    public class SchoolResponsibility : ChallengeModel
     {
-        public SchoolResponsibility()
+        public SchoolResponsibility(string title): base(title)
         {
-            AddChallengeContent(getStructure("Get to school on time?"));
-            AddChallengeContent(getStructure("Have paper, pencil and books?"));
-            AddChallengeContent(getStructure("Do your class work neatly?"));
-            AddChallengeContent(getStructure("Do your school work willingly?"));
-            AddChallengeContent(getStructure("Study for tests?"));
-            AddChallengeContent(getStructure("Complete all assignments?"));
-            AddChallengeContent(getStructure("Do extra credit assignments when you have the chance?"));
-            AddChallengeContent(getStructure("Pay attention in class?"));
-            AddChallengeContent(getStructure("Turn in your homework?"));
-            AddChallengeContent(getStructure("Get good grades?"));
-            AddChallengeContent(getStructure("Do your best?"));
-            AddChallengeContent(getStructure("Realize the importance of school?"));            
+            ChallengeContent = new List<string>{
+            "Get to school on time?",
+            "Have paper, pencil and books?",
+            "Do your class work neatly?",
+            "Do your school work willingly?",
+            "Study for tests?",
+            "Complete all assignments?",
+            "Do extra credit assignments when you have the chance?",
+            "Pay attention in class?",
+            "Turn in your homework?",
+            "Get good grades?",
+            "Do your best?",
+            "Realize the importance of school?"
+            };
         }
 
-        private StackLayout getStructure(String label)
+        public override View GetStructure(string lbl)
         {
             var structure = new StackLayout {
                 Orientation = StackOrientation.Horizontal,                
                 Children =
                 {
-                    new Label{ Text = label},
+                    new Label{ Text = lbl},
                     new Switch{}//TODO: add functionallity to  add  value to a dropdown when toggledoff
 
                 }

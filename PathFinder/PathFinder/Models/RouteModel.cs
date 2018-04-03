@@ -2,6 +2,7 @@
 using PathFinder.Pages;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
@@ -12,7 +13,7 @@ namespace PathFinder.Models
     {
         public static Color PrimaryColor { get; protected set; }
         public static Color SecondaryColor { get; protected set; }
-        public static String ROUTEPDF;
+        public static String PDFNAME;
 //        public static LevelModel CURRENT_LEVEL;
         private static Stack<LevelModel> _history_stack;
         public Route() : base()
@@ -27,7 +28,6 @@ namespace PathFinder.Models
         {
             get { return StartLevel.LevelName; }
             set { StartLevel = new LevelModel(value);
-                Route.ROUTEPDF = StartLevel.LevelName + ".pdf";
                 Route.switchPage(StartLevel);
             }
         }

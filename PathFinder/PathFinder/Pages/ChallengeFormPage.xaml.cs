@@ -11,23 +11,22 @@ namespace PathFinder.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ChallengeFormPage : ContentPage
 	{
-        ChallengeFormVM _formVM;
-        ChallengeModel _parent;
-		public ChallengeFormPage ()
-		{
-            _formVM = new ChallengeFormVM();
+        ChallengeFormVM _formVM;        
+		public ChallengeFormPage (ChallengeModel challenge)
+		{            
 			InitializeComponent();
+            _formVM = new ChallengeFormVM(challenge);
             BindingContext = _formVM;
+            foreach(View v in _formVM.ContentViews)
+            {
+                sl_content.Children.Add(v);
+            }
 		}
 
-        public void SetParent(ChallengeModel p)
-        {
-            _parent = p;
-        }
-
+        
         public void SubmitForm(object s, EventArgs e)
         {
-            _parent.Completed = true;
+            _formVM.Completed = true;
             Route.Current.MainPage.Navigation.PopAsync();
         }
 
@@ -36,18 +35,9 @@ namespace PathFinder.Pages
             Route.Current.MainPage.Navigation.PopAsync();
         }
 
-        public void AddChallengeContent(View v)
-        {
-            _formVM.ChallengeContent.Add(v);            
-        }
-
         protected override void OnAppearing()
         {
-            sl_challenge_content.Children.Clear();
-            foreach(View v in _formVM.ChallengeContent)
-            {
-                sl_challenge_content.Children.Add(v);
-            }
+            
         }
     }
 }
