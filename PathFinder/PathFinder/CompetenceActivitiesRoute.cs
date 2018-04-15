@@ -17,7 +17,8 @@ namespace CompetenceActivities
             PDFNAME = "CompetenceActivities";
             RouteName = "Competence Activities";
             Route.PrimaryColor = Color.Green;
-            Route.SecondaryColor = Color.Yellow;            
+            Route.SecondaryColor = Color.Yellow;
+            StartLevel.addSection(new ResourcePDF("Competence Activity Booklet", 0));
             StartLevel.addSection(Goals.asLevelContent());
             StartLevel.addSection(Needs.asLevelContent());
             StartLevel.addSection(Homework.asLevelContent());

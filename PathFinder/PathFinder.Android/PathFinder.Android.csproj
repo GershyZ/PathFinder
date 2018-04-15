@@ -377,6 +377,7 @@
     <AndroidAsset Include="Assets\Content\CompetenceActivities.7.pdf" />
     <AndroidAsset Include="Assets\Content\CompetenceActivities.8.pdf" />
     <AndroidAsset Include="Assets\Content\CompetenceActivities.9.pdf" />
+    <AndroidAsset Include="Assets\Content\CompetenceActivities.0.pdf" />
     <None Include="Resources\AboutResources.txt" />
   </ItemGroup>
   <ItemGroup>

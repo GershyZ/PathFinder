@@ -1,9 +1,5 @@
-﻿using PathFinder.Models;
-using PathFinder.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Xamarin.Forms;
 
@@ -14,33 +10,26 @@ namespace PathFinder.Models
         public static Color PrimaryColor { get; protected set; }
         public static Color SecondaryColor { get; protected set; }
         public static String PDFNAME;
-//        public static LevelModel CURRENT_LEVEL;
-        private static Stack<LevelModel> _history_stack;
+
         public Route() : base()
-        {         
-            _history_stack = new Stack<LevelModel>();          
-            _history_stack.Push(new LevelModel("RAWR"));
-            Current.MainPage = new NavigationPage(new ContentPage());
+        {
+            Current.MainPage = new NavigationPage(new Pages.TableOfContentsPage());
         }
-        public  LevelModel StartLevel { get; private set; }
+        public LevelModel StartLevel { get; private set; }
 
         public String RouteName
         {
             get { return StartLevel.LevelName; }
-            set { StartLevel = new LevelModel(value);
+            set
+            {
+                StartLevel = new LevelModel(value);
                 Route.switchPage(StartLevel);
             }
         }
 
         public static void switchPage(LevelModel level)
         {
-            //CURRENT_LEVEL = level;
-            if (_history_stack.Contains(level))
-            {
-                _goBack(level);     
-            }
-            _history_stack.Push(level);
-            Route.Current.MainPage.Navigation.PushAsync(level.asLevelPage());
+            Route.Current.MainPage.Navigation.PushAsync(new NavigationPage(level.asLevelPage()));
         }
 
         public static void showLevelContent(ContentPage lc)
@@ -48,27 +37,5 @@ namespace PathFinder.Models
             Route.Current.MainPage.Navigation.PushAsync(lc);
         }
 
-        private static void _goBack(LevelModel backtrack)
-        {           
-            bool found = false;
-            if (backtrack == null || _history_stack.Count == 0)
-            {
-                found = true;
-            }
-            LevelModel curr = null;
-            while (_history_stack.Count > 0 && _history_stack.Peek() != null && !found)
-            {
-                curr = _history_stack.Pop();
-                if (curr.Equals(backtrack))
-                {
-                    found = true;
-                }
-            }
-        }
-
-        public static Stack<LevelModel> getHistory()
-        {
-            return _history_stack; 
-        }
     }
 }   

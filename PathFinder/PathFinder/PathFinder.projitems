@@ -34,6 +34,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\LevelUpModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RouteModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SubLevelModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\TableOfContentsPage.xaml.cs">
+      <DependentUpon>TableOfContentsPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ChallengeFormVM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LevelContentVM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LevelPageVM.cs" />
@@ -45,6 +49,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)HighSchoolPlanner\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Content\CompetenceActivities.0.pdf" />
     <None Include="$(MSBuildThisFileDirectory)Content\CompetenceActivities.1.pdf" />
     <None Include="$(MSBuildThisFileDirectory)Content\CompetenceActivities.10.pdf" />
     <None Include="$(MSBuildThisFileDirectory)Content\CompetenceActivities.11.pdf" />
@@ -86,6 +91,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\ChallengeFormPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\TableOfContentsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
