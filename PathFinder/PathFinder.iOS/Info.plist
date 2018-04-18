@@ -25,7 +25,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>PathFinder</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.gezebo.PathFinder</string>
+	<string>com.gezebo.pathfinder</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>CFBundleIconFiles</key>
@@ -50,5 +50,9 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>PathFinder</string>
+	<key>XSLaunchImageAssets</key>
+	<string>Resources/Media.xcassets/LaunchImages.launchimage</string>
+	<key>XSAppIconAssets</key>
+	<string>Resources/Media.xcassets/AppIcons.appiconset</string>
 </dict>
 </plist>
