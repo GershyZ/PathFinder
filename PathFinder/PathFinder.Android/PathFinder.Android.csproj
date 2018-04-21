@@ -378,6 +378,31 @@
     <AndroidAsset Include="Assets\Content\CompetenceActivities.8.pdf" />
     <AndroidAsset Include="Assets\Content\CompetenceActivities.9.pdf" />
     <AndroidAsset Include="Assets\Content\CompetenceActivities.0.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.1.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.2.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.3.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.4.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.5.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.6.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.7.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.8.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.9.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.10.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.11.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.12.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.13.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.14.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.15.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.16.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.17.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.18.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.19.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.20.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.21.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.22.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.23.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.24.pdf" />
+    <AndroidAsset Include="Assets\Content\ConfidenceActivities.0.pdf" />
     <None Include="Resources\AboutResources.txt" />
   </ItemGroup>
   <ItemGroup>

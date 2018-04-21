@@ -27,12 +27,12 @@ namespace PathFinder.Pages
         public void SubmitForm(object s, EventArgs e)
         {
             _formVM.Completed = true;
-            Route.Current.MainPage.Navigation.PopAsync();
+            Route.GoBack();               
         }
 
         public void CancelForm(object o, EventArgs e)
         {
-            Route.Current.MainPage.Navigation.PopAsync();
+            Route.GoBack();
         }
 
         protected override void OnAppearing()

@@ -20,7 +20,7 @@ namespace PathFinder.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new CompetenceActivities.CompetenceActivitiesRoute());
+            LoadApplication(new App());
         }
     }
 }

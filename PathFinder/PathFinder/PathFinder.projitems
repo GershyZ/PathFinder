@@ -12,6 +12,7 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\LevelPage.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CompetenceActivities\APlanForMyGoals.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CompetenceActivities\AssessStudyHabits.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CompetenceActivities\CornellNoteTaking.cs" />
@@ -19,6 +20,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)CompetenceActivities\SchoolResponsibility.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CompetenceActivitiesRoute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CompetenceActivities\StudyHabits.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivitiesRoute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ResourcePDF.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\ChallengeFormPage.xaml.cs">
       <DependentUpon>ChallengeFormPage.xaml</DependentUpon>
@@ -41,7 +43,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ChallengeFormVM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LevelContentVM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LevelPageVM.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Views\BearTrack.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\CustomWebView.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -87,7 +88,31 @@
     <None Include="$(MSBuildThisFileDirectory)Content\CompetenceActivities.7.pdf" />
     <None Include="$(MSBuildThisFileDirectory)Content\CompetenceActivities.8.pdf" />
     <None Include="$(MSBuildThisFileDirectory)Content\CompetenceActivities.9.pdf" />
-    <None Include="$(MSBuildThisFileDirectory)Content\CompetenceActivities.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.0.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.1.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.10.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.11.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.12.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.13.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.14.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.15.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.16.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.17.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.18.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.19.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.2.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.20.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.21.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.22.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.23.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.24.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.3.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.4.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.5.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.6.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.7.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.8.pdf" />
+    <None Include="$(MSBuildThisFileDirectory)Content\ConfidenceActivities.9.pdf" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\ChallengeFormPage.xaml">

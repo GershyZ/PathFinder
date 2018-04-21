@@ -23,7 +23,7 @@ namespace PathFinder.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new CompetenceActivities.CompetenceActivitiesRoute());
+            LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
         }

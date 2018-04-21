@@ -5,15 +5,15 @@ using Xamarin.Forms;
 
 namespace PathFinder.Models
 {
-    public class Route : Application
+    public class Route
     {
         public static Color PrimaryColor { get; protected set; }
         public static Color SecondaryColor { get; protected set; }
         public static String PDFNAME;
 
-        public Route() : base()
+        public Route()
         {
-            Current.MainPage = new NavigationPage(new Pages.TableOfContentsPage());
+            
         }
         public LevelModel StartLevel { get; private set; }
 
@@ -29,13 +29,17 @@ namespace PathFinder.Models
 
         public static void switchPage(LevelModel level)
         {
-            Route.Current.MainPage.Navigation.PushAsync(new NavigationPage(level.asLevelPage()));
+            App.Current.MainPage.Navigation.PushAsync(new NavigationPage(level.asLevelPage()));
         }
 
         public static void showLevelContent(ContentPage lc)
         {
-            Route.Current.MainPage.Navigation.PushAsync(lc);
+            App.Current.MainPage.Navigation.PushAsync(lc);
         }
 
+        public static void GoBack()
+        {
+            App.Current.MainPage.Navigation.PopAsync();
+        }
     }
 }   
