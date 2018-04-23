@@ -10,8 +10,8 @@ namespace ConfidenceActivities
         {
             PDFNAME = "ConfidenceActivities";
             RouteName = "Confidence Activities";
-            Route.PrimaryColor = Color.Green;
-            Route.SecondaryColor = Color.Yellow;
+            PrimaryColor = Color.Green;
+            SecondaryColor = Color.Yellow;
             StartLevel.addSection(new ResourcePDF("Confidence Activity Booklet", 0));
             StartLevel.addSection(new LevelContentModel("This Year's Milestones"));
             StartLevel.addSection(SelfExploration.asLevelContent());

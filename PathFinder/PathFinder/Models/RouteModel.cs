@@ -7,8 +7,8 @@ namespace PathFinder.Models
 {
     public class Route
     {
-        public static Color PrimaryColor { get; protected set; }
-        public static Color SecondaryColor { get; protected set; }
+        public Color PrimaryColor { get;  set; }
+        public Color SecondaryColor { get; set; }
         public static String PDFNAME;
 
         public Route()

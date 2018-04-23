@@ -1,4 +1,5 @@
 ﻿using PathFinder.Models;
+using PathFinder.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,14 +9,20 @@ using Xamarin.Forms;
 
 namespace PathFinder
 {
-	public class App : Application
-	{
+    public class App : Application
+    {
+        Route ToC;
         public App() : base()
         {
-            LevelModel main = new LevelModel("Table Of Contents");
-            main.addSection(new CompetenceActivities.CompetenceActivitiesRoute().StartLevel.asLevelContent());
-            main.addSection(new ConfidenceActivities.ConfidenceActivitiesRoute().StartLevel.asLevelContent());
-            Current.MainPage = main.asLevelPage();
+            ToC = new Route
+            {
+                RouteName = "Table of Contents",
+                PrimaryColor = Color.Beige,
+                SecondaryColor = Color.OldLace
+            };
+            ToC.StartLevel.addSection(new CompetenceActivities.CompetenceActivitiesRoute().StartLevel.asLevelContent());
+            ToC.StartLevel.addSection(new ConfidenceActivities.ConfidenceActivitiesRoute().StartLevel.asLevelContent());
+            Current.MainPage = ToC.StartLevel.asLevelPage();
         }
-	}
+    }
 }
