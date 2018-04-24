@@ -23,7 +23,6 @@ namespace PathFinder.Models
             set
             {
                 StartLevel = new LevelModel(value);
-                Route.switchPage(StartLevel);
             }
         }
 
@@ -42,4 +41,4 @@ namespace PathFinder.Models
             App.Current.MainPage.Navigation.PopAsync();
         }
     }
-}   
+}       

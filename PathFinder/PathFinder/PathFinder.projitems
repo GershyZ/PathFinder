@@ -12,7 +12,10 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\LevelPage.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)CompetenceActivities\APlanForMyGoals.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CompetenceActivities\AssessStudyHabits.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CompetenceActivities\CornellNoteTaking.cs" />
@@ -122,6 +125,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\TableOfContentsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

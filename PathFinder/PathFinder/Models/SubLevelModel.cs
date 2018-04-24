@@ -13,8 +13,7 @@ namespace PathFinder.Models
             _level = level;
         }
         public override void onTap()
-        {
-            //Route.CURRENT_LEVEL = _level;
+        {            
             Route.switchPage(_level);
         }
     }

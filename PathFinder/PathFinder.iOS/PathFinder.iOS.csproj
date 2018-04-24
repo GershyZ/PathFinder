@@ -156,7 +156,6 @@
     <BundleResource Include="Content\ConfidenceActivities.9.pdf" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
-    <Compile Include="PdfWebViewRenderer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

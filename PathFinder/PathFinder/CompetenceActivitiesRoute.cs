@@ -24,9 +24,7 @@ namespace CompetenceActivities
             StartLevel.addSection(Homework.asLevelContent());
             StartLevel.addSection(Studying.asLevelContent());
             StartLevel.addSection(Career.asLevelContent());            
-            StartLevel.addSection(College.asLevelContent());
-            
-            Route.switchPage(StartLevel);
+            StartLevel.addSection(College.asLevelContent());            
         }
 
         private LevelModel Goals
