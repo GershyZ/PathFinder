@@ -24,6 +24,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)CompetenceActivitiesRoute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CompetenceActivities\StudyHabits.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivitiesRoute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivities\ActivityList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivities\DontWait.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivities\MyValues.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivities\WhoAmI.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ResourcePDF.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\ChallengeFormPage.xaml.cs">
       <DependentUpon>ChallengeFormPage.xaml</DependentUpon>

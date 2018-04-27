@@ -1,4 +1,5 @@
 ﻿using PathFinder.Models;
+using PathFinder.ConfidenceActivities;
 
 using Xamarin.Forms;
 
@@ -18,9 +19,9 @@ namespace ConfidenceActivities
             StartLevel.addSection(new ResourcePDF("Conversation Topics", 10));
             StartLevel.addSection(KnowYourRole.asLevelContent());
             StartLevel.addSection(new ResourcePDF("Twenty-One Questions", 17));
-            StartLevel.addSection(new LevelContentModel("Don't Wait Too Long!"));
-            StartLevel.addSection(new LevelContentModel("Getting Organized"));
-            StartLevel.addSection(new LevelContentModel("Activity List"));
+            StartLevel.addSection(new DontWait("Don't Wait Too Long!"));
+            StartLevel.addSection(new ResourcePDF("Getting Organized",20));
+            StartLevel.addSection(new ActivityList("Activity List"));
             StartLevel.addSection(PersonalMission.asLevelContent());
         }
 
@@ -34,10 +35,10 @@ namespace ConfidenceActivities
                 curr.addSection(new ResourcePDF("Pride Line", 2));
                 curr.addSection(new ResourcePDF("Self Portrait", 3));
                 curr.addSection(new ResourcePDF("The Magic Box", 4));
-                curr.addSection(new LevelContentModel("Who Am I? Questionnairre"));
-                curr.addSection(new LevelContentModel("Valuing Yourself"));
+                curr.addSection(new WhoAmI("Who Am I? Questionnairre"));
+                curr.addSection(new MyValues("Valuing Yourself"));
                 curr.addSection(new ResourcePDF("My Personal Shield", 7));
-                curr.addSection(new LevelContentModel("Who Decides?"));
+                curr.addSection(new WhoDecides("Who Decides?"));
                 curr.addSection(new LevelContentModel("Who is Responsible?"));
 
                 return curr;
