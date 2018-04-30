@@ -7,10 +7,11 @@ using Xamarin.Forms;
 
 namespace CompetenceActivities
 {
-    public class StudyHabits : ChallengeModel
+    public class StudyHabits : MultipleChoiceModel
     {
         public StudyHabits(string title) : base(title)
         {
+            _choices = new string[] { "", "Almost Always", "Sometimes", "Very Seldom" };
             ChallengeContent = new List<String> {
                 "Do you make a budget or schedule of your study time?",
                 "Do you follow it?",
@@ -26,32 +27,6 @@ namespace CompetenceActivities
                 "Do you look up all new words?",
                 "Do you study in a quiet place at home?"
             };
-        }
-        public override View GetStructure (string lbl)
-        {
-            var structure = new StackLayout
-            {
-                Orientation = StackOrientation.Horizontal,
-                Children =
-                {
-                    new Label{ Text = lbl},
-                    Dropdown
-                }
-            };
-
-            return structure;
-
-        }
-
-        private Picker Dropdown
-        {
-            get
-            {
-                Picker p = new Picker {
-                    ItemsSource = new string[] { "", "Almost Always", "Sometimes", "Very Seldom" }
-                };
-                return p;
-            }
         }
     }
 }

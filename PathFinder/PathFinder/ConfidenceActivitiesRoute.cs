@@ -39,7 +39,7 @@ namespace ConfidenceActivities
                 curr.addSection(new MyValues("Valuing Yourself"));
                 curr.addSection(new ResourcePDF("My Personal Shield", 7));
                 curr.addSection(new WhoDecides("Who Decides?"));
-                curr.addSection(new LevelContentModel("Who is Responsible?"));
+                curr.addSection(new WhoResponsible("Who is Responsible?"));
 
                 return curr;
             }
@@ -49,9 +49,9 @@ namespace ConfidenceActivities
             get
             {
                 LevelModel curr = new LevelModel("Know Your Role");
-                curr.addSection(new LevelContentModel("Are You a Creator?"));
-                curr.addSection(new LevelContentModel("Are You a Doer?"));
-                curr.addSection(new LevelContentModel("Are You a Helper?"));
+                curr.addSection(new CreatorRole("Are You a Creator?"));
+                curr.addSection(new DoerRole("Are You a Doer?"));
+                curr.addSection(new HelperRole("Are You a Helper?"));
                 curr.addSection(new LevelContentModel("Are You an Influencer?"));
                 curr.addSection(new LevelContentModel("Are You an Investigator?"));
                 curr.addSection(new LevelContentModel("Are You an Organizer?"));
