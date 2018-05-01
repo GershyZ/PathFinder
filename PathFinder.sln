@@ -11,7 +11,6 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PathFinder", "PathFinder\Pa
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		PathFinder\PathFinder\PathFinder.projitems*{d5f60415-18c4-4a1f-804d-a8cd7492f848}*SharedItemsImports = 13
 		PathFinder\PathFinder\PathFinder.projitems*{dc90e963-7503-48c1-bd9c-5259815c8a5c}*SharedItemsImports = 4
 		PathFinder\PathFinder\PathFinder.projitems*{eeabaa98-1681-4680-9a23-60ea89fb9071}*SharedItemsImports = 4
 	EndGlobalSection
