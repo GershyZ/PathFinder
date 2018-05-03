@@ -29,7 +29,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivities\DoerRole.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivities\DontWait.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivities\HelperRole.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivities\InfluencerRole.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivities\InvestigatorRole.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivities\MyValues.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivities\OrganizerRole.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivities\WhoAmI.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivities\WhoDecides.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivities\WhoResponsible.cs" />

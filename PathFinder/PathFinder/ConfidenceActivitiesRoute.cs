@@ -52,9 +52,9 @@ namespace ConfidenceActivities
                 curr.addSection(new CreatorRole("Are You a Creator?"));
                 curr.addSection(new DoerRole("Are You a Doer?"));
                 curr.addSection(new HelperRole("Are You a Helper?"));
-                curr.addSection(new LevelContentModel("Are You an Influencer?"));
-                curr.addSection(new LevelContentModel("Are You an Investigator?"));
-                curr.addSection(new LevelContentModel("Are You an Organizer?"));
+                curr.addSection(new InfluencerRole("Are You an Influencer?"));
+                curr.addSection(new InvestigatorRole("Are You an Investigator?"));
+                curr.addSection(new OrganizerRole("Are You an Organizer?"));
                 return curr;
             }
         }

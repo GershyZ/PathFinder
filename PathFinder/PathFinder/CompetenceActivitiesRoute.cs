@@ -1,11 +1,4 @@
-﻿using PathFinder.Pages;
-using PathFinder.Models;
-using PathFinder.Views;
-using CompetenceActivities;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿using PathFinder.Models;
 using Xamarin.Forms;
 
 namespace CompetenceActivities

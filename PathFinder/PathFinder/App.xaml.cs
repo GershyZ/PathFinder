@@ -1,16 +1,13 @@
 ﻿using PathFinder.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using PathFinder.ConfidenceActivities;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ConfidenceActivities;
+using CompetenceActivities;
 
 namespace PathFinder
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class App : Application
 	{
 		public App () : base()
@@ -25,8 +22,8 @@ namespace PathFinder
             };
                         
             
-            ToC.StartLevel.addSection(new CompetenceActivities.CompetenceActivitiesRoute().StartLevel.asLevelContent());            
-            ToC.StartLevel.addSection(new ConfidenceActivities.ConfidenceActivitiesRoute().StartLevel.asLevelContent());
+            ToC.StartLevel.addSection(new CompetenceActivitiesRoute().StartLevel.asLevelContent());            
+            ToC.StartLevel.addSection(new ConfidenceActivitiesRoute().StartLevel.asLevelContent());
             MainPage = new NavigationPage(ToC.StartLevel.asLevelPage());
         }
 	}
