@@ -2,32 +2,28 @@
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using Newtonsoft.Json;
 using PathFinder.Models;
 using PathFinder.ViewModels;
+using PathFinder.Helpers;
 
 namespace PathFinder.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ChallengeFormPage : ContentPage
-	{
-        ChallengeFormVM _formVM;        
-		public ChallengeFormPage (ChallengeModel challenge)
-		{            
-			InitializeComponent();
+    public partial class ChallengeFormPage : ContentPage
+    {
+        ChallengeFormVM _formVM;
+        public ChallengeFormPage(ChallengeModel challenge)
+        {
+            InitializeComponent();
             _formVM = new ChallengeFormVM(challenge);
             BindingContext = _formVM;
-            foreach(View v in _formVM.ContentViews)
-            {
-                sl_content.Children.Add(v);
-            }
-		}
+        }
 
-        
+
         public void SubmitForm(object s, EventArgs e)
         {
-            _formVM.Completed = true;
-            Route.GoBack();               
+            Route.GoBack();
         }
 
         public void CancelForm(object o, EventArgs e)
@@ -36,8 +32,13 @@ namespace PathFinder.Pages
         }
 
         protected override void OnAppearing()
-        {
-            
+        {            
+            sl_content.Children.Clear();
+            var content = _formVM.getContentViews();
+            for (int i = 0; i < content.Count; i++)
+            {
+                sl_content.Children.Add(content[i].Structure);
+            }            
         }
     }
 }

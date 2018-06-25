@@ -6,9 +6,9 @@ using Xamarin.Forms;
 
 namespace CompetenceActivities
 {
-    public class MyLongTermGoals : ChallengeModel
+    public class MyLongTermGoals : FillinModel
     {
-        public MyLongTermGoals(string title):base(title)
+        public MyLongTermGoals(string title) : base(title)
         {
             ChallengeContent = new List<string>{
                 "By next month I'd like to",
@@ -21,16 +21,6 @@ namespace CompetenceActivities
              "I would like to get a job as",
              "I hope to graduate from",
              "After I graduate, I plan to"
-            };
-        }
-        public override View GetStructure(string lbl)
-        {
-            return new StackLayout
-            {
-                Children =
-                {
-                    new Entry { Placeholder = lbl }
-                }
             };
         }
     }

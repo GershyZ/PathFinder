@@ -7,9 +7,8 @@ namespace PathFinder.ConfidenceActivities
 {
     public class WhoResponsible : MultipleChoiceModel
     {
-        public WhoResponsible(string title) : base(title)
-        {
-            _choices = new string[] { "Responsible", "Irrisponsible"};
+        public WhoResponsible(string title) : base(title, new string[] { "Responsible", "Irrisponsible" })
+        {             
             ChallengeContent = new List<string>
             {
                 "Jimmy told his mother he was going to Carl's house. Then he went there.",

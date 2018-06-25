@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace PathFinder.ConfidenceActivities
 {
-    class DontWait : ChallengeModel
+    class DontWait : FillinModel
     {
         public DontWait(string title) : base(title)
         {
@@ -30,11 +30,6 @@ namespace PathFinder.ConfidenceActivities
               "I would like to…",
               "Five adjectives that describe me are…"
           };
-        }
-        
-        public override View GetStructure(string lbl)
-        {
-            return new Entry { Placeholder = lbl };
-        }
+        }       
     }
 }

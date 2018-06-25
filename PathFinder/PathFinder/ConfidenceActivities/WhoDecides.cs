@@ -8,9 +8,8 @@ namespace PathFinder.ConfidenceActivities
 {
     public class WhoDecides : MultipleChoiceModel
     {
-        public WhoDecides(string title) : base(title)
-        {
-            _choices = new string[]{ "Me","Teacher","Parent"};
+        public WhoDecides(string title) : base(title, new string[] { "Me", "Teacher", "Parent" })
+        {           
             ChallengeContent = new List<string>
             {
                 "My favorite book?",
@@ -27,7 +26,6 @@ namespace PathFinder.ConfidenceActivities
                 "If I'm nice to a new classmate?",
                 "Where I sit in the classroom?"
             };
-
         }
     }
 }

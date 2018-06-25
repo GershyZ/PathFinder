@@ -8,9 +8,9 @@ using Xamarin.Forms;
 
 namespace CompetenceActivities
 {
-    public class SchoolResponsibility : ChallengeModel
+    public class SchoolResponsibility : TrueFalseModel
     {
-        public SchoolResponsibility(string title): base(title)
+        public SchoolResponsibility(string title) : base(title)
         {
             ChallengeContent = new List<string>{
             "Get to school on time?",
@@ -26,21 +26,6 @@ namespace CompetenceActivities
             "Do your best?",
             "Realize the importance of school?"
             };
-        }
-
-        public override View GetStructure(string lbl)
-        {
-            var structure = new StackLayout {
-                Orientation = StackOrientation.Horizontal,                
-                Children =
-                {
-                    new Label{ Text = lbl},
-                    new Switch{}//TODO: add functionallity to  add  value to a dropdown when toggledoff
-
-                }
-                
-            };
-            return structure;
         }
     }
 }

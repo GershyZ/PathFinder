@@ -3,10 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PathFinder.Pages.ChallengeFormPage">
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout x:Name="sl_content">   
-
+        <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
+            <ScrollView>
+                <StackLayout x:Name="sl_content" Orientation="Vertical" Spacing="5"></StackLayout>
+            </ScrollView>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+                <Button Text="Submit" Clicked="SubmitForm"/>
+                <Button Text="Cancel" Clicked="CancelForm"/> 
             </StackLayout>
-        </ScrollView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

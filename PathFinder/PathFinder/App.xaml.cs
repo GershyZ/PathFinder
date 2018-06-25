@@ -16,13 +16,11 @@ namespace PathFinder
      
             Route ToC = new Route
             {
-                RouteName = "Table of Contents",
-                PrimaryColor = Color.Beige,
-                SecondaryColor = Color.OldLace
+                RouteName = "Table of Contents"
             };
-                        
-            
-            ToC.StartLevel.addSection(new CompetenceActivitiesRoute().StartLevel.asLevelContent());            
+
+
+            ToC.StartLevel.addSection(new CompetenceActivitiesRoute().StartLevel.asLevelContent());           
             ToC.StartLevel.addSection(new ConfidenceActivitiesRoute().StartLevel.asLevelContent());
             MainPage = new NavigationPage(ToC.StartLevel.asLevelPage());
         }

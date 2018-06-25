@@ -36,6 +36,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivities\WhoAmI.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivities\WhoDecides.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ConfidenceActivities\WhoResponsible.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FillinModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\MultipleChoiceModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ResourcePDF.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\TrueFalseModel.cs" />
@@ -53,17 +55,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\LevelUpModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RouteModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SubLevelModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\TableOfContentsPage.xaml.cs">
-      <DependentUpon>TableOfContentsPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ChallengeFormVM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LevelContentVM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LevelPageVM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\CustomWebView.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
     <Folder Include="$(MSBuildThisFileDirectory)HighSchoolPlanner\" />
   </ItemGroup>
   <ItemGroup>
@@ -133,12 +130,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\ChallengeFormPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\TableOfContentsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

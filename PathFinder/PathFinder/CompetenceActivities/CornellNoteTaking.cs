@@ -8,20 +8,14 @@ namespace CompetenceActivities
 {
     public class CornellNoteTaking : ChallengeModel
     {
-        public CornellNoteTaking(string title): base(title) {
-            
-        }
-
-        public override View GetStructure(string lbl)
+        public CornellNoteTaking(string title) : base(title)
         {
 
-            var structure = new StackLayout
-            {
-                Orientation = StackOrientation.Vertical,
+        }
 
-            };
-
-            return structure;
-        }                
+        public override ChallengeView GetChallengeView(string prompt)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

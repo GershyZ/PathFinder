@@ -13,9 +13,9 @@ namespace PathFinder.ConfidenceActivities
 
         }
 
-        public override View GetStructure(string lbl)
+        public override ChallengeView GetChallengeView(string prompt)
         {
             throw new NotImplementedException();
-        }
+        }        
     }
 }

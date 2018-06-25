@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace PathFinder.ConfidenceActivities
 {
-    public class MyValues :ChallengeModel
+    public class MyValues : ChallengeModel
     {
         public MyValues(string title) : base(title)
         {
@@ -18,19 +18,28 @@ namespace PathFinder.ConfidenceActivities
             };
         }
 
-        public override View GetStructure(string lbl)
+        public override ChallengeView GetChallengeView(string prompt)
         {
-            return new StackLayout
+            return new MyValuesView(prompt);
+        }
+
+        public class MyValuesView : ChallengeView
+        {
+            Entry e1, e2, e3;
+            public MyValuesView(string prompt, string ans1 = "", string ans2 = "", string ans3 = "") : base(prompt)
             {
-                Orientation = StackOrientation.Vertical,
-                Children =
+                e1 = new Entry { Text = ans1 };
+                e2 = new Entry { Text = ans2 };
+                e3 = new Entry { Text = ans3 };
+                Structure = new StackLayout
                 {
-                    new Label{Text = lbl },
-                    new Entry(),
-                    new Entry(),
-                    new Entry(),
-                    }
-            };
+                    Orientation = StackOrientation.Vertical,
+                    Children = {
+                            new Label{Text = Prompt },
+                            e1,e2,e3
+                        }
+                };
+            }
         }
     }
 }

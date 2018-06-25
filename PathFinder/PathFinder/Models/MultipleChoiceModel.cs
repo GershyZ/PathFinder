@@ -9,28 +9,42 @@ namespace PathFinder.Models
     {
         protected string[] _choices;
 
-        public MultipleChoiceModel(string title) : base(title)
+        public MultipleChoiceModel(string title, string[] choices) : base(title)
         {
-
+            _choices = choices;
         }
-        public override View GetStructure(string lbl)
+
+        public override ChallengeView GetChallengeView(string prompt)
         {
-            return new StackLayout
+            return new MultipleChoiceStructure(prompt, _choices);
+        }
+        public class MultipleChoiceStructure : ChallengeView
+        {
+            Label Question { get; set; }
+            Picker Answer { get; set; }
+            public MultipleChoiceStructure(string prompt, string[] choices, string answer = "") : base(prompt)
             {
-                Orientation = StackOrientation.Horizontal,
-                Children =
+                Question = new Label
                 {
-                    new Label{
-                        Text =lbl,
-                        HorizontalOptions=LayoutOptions.Start
-                    },
-                    new Picker
+                    Text = Prompt,
+                    HorizontalOptions = LayoutOptions.Start
+                };
+                Answer = new Picker
+                {
+                    HorizontalOptions = LayoutOptions.EndAndExpand,
+                    ItemsSource = choices,
+                    SelectedItem = answer
+                };
+                Structure = new StackLayout
+                {
+                    Orientation = StackOrientation.Horizontal,
+                    Children =
                     {
-                        HorizontalOptions = LayoutOptions.EndAndExpand,
-                        ItemsSource = _choices
+                        Question,
+                        Answer
                     }
-                }
-            };
+                };
+            }
         }
     }
 }

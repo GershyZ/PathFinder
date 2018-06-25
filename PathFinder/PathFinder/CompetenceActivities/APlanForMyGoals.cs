@@ -12,28 +12,38 @@ namespace CompetenceActivities
         public APlanForMyGoals(string title) : base(title)
         {
             ChallengeContent = new List<string> {
-            "Work Habits",
-            "Academic",
-            "Personal",
-            "Behavior",
-            "Attendance"
-        };
+                "Work Habits",
+                "Academic",
+                "Personal",
+                "Behavior",
+                "Attendance"
+            };
         }
 
-        public override View GetStructure(string lbl)
+        public override ChallengeView GetChallengeView(string prompt)
         {
-            return new StackLayout
+            return new MyValuesView(prompt);
+        }
+
+        public class MyValuesView : ChallengeView
+        {
+            Entry e1, e2, e3;
+            public MyValuesView(string prompt) : base(prompt)
             {
-                Orientation = StackOrientation.Vertical,
-                Children =
+                e1 = new Entry { Placeholder = "My goal is to" };
+                e2 = new Entry { Placeholder = "I will do these activities to reach my goal" };
+                e3 = new Entry { Placeholder = "I will know I made my goal when" };
+                Structure = new StackLayout
                 {
-                    new Label{Text = lbl },
-                    new Entry{Placeholder = "My goal is to" },
-                    new Entry{Placeholder = "I will do these activities to reach my goal"},
-                    new Entry{Placeholder = "I will know I made my goal when"}
-                },
-                Margin = 15
-            };
+                    Orientation = StackOrientation.Vertical,
+                    Children =
+                        {
+                            new Label{Text = Prompt},
+                            e1,e2,e3
+                        },
+                    Margin = 15
+                };
+            }
         }
     }
 }

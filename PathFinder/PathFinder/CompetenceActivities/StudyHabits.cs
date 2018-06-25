@@ -9,9 +9,8 @@ namespace CompetenceActivities
 {
     public class StudyHabits : MultipleChoiceModel
     {
-        public StudyHabits(string title) : base(title)
-        {
-            _choices = new string[] { "", "Almost Always", "Sometimes", "Very Seldom" };
+        public StudyHabits(string title) : base(title, new string[] { "", "Almost Always", "Sometimes", "Very Seldom" })
+        {            
             ChallengeContent = new List<String> {
                 "Do you make a budget or schedule of your study time?",
                 "Do you follow it?",

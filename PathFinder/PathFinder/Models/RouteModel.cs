@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
@@ -24,7 +24,7 @@ namespace PathFinder.Models
             {
                 StartLevel = new LevelModel(value);
             }
-        }
+        }       
 
         public static void switchPage(LevelModel level)
         {
